@@ -43,7 +43,7 @@ async def start(bot, message):
         "**please contact me on (--------)**")
     
 @bot.on_message(filters.text & filters.private)
-async def pdisk_uploader(bot, message):
+async def link_handler(bot, message):
     new_string = str(message.text)
     conv = await message.reply("Converting...")
     dele = conv["message_id"]
@@ -56,7 +56,7 @@ async def pdisk_uploader(bot, message):
 
 
 @bot.on_message(filters.photo & filters.private)
-async def pdisk_uploader(bot, message):
+async def link_handler(bot, message):
     new_string = str(message.caption)
     conv = await message.reply("Converting...")
     dele = conv["message_id"]
