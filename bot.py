@@ -64,7 +64,7 @@ async def pdisk_uploader(bot, message):
         pdisk_link = await multi_pdisk_up(new_string)
         if(len(pdisk_link) > 1020):
             await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
-            await message.reply(f'{pdisk_link}' , quote=True)
+            await message.reply(f'{**pdisk_link**}' , quote=True)
         else:
             await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
             await bot.send_photo(message.chat.id, message.photo.file_id, caption=f'{pdisk_link}')
@@ -79,7 +79,7 @@ async def pdisk_up(link):
         async with aiohttp.ClientSession() as session:
             async with session.get(url, params=params, raise_for_status=True) as response:
                 data = await response.json()
-                v_url = """🔘__Link__ - \n """ + data[***"shortenedUrl"***] +  """\n"""
+                v_url = """🔘__Link__ - \n """ + data["shortenedUrl"] +  """\n"""
     else:
         v_url = link
         
