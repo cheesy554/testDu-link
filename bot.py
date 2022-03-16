@@ -40,7 +40,7 @@ async def start(bot, message):
 async def start(bot, message):
     await message.reply(
         f"**Hey, {message.chat.first_name}!**\n\n"
-        "**please contact me on @kamdev07 or for more join @pdisk_Admins**")
+        "**please contact me on --------**")
     
 @bot.on_message(filters.text & filters.private)
 async def pdisk_uploader(bot, message):
@@ -64,10 +64,10 @@ async def pdisk_uploader(bot, message):
         pdisk_link = await multi_pdisk_up(new_string)
         if(len(pdisk_link) > 1020):
             await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
-            await message.reply(f'{**pdisk_link**}' , quote=True)
+            await message.reply(f'{pdisk_link}' , quote=True)
         else:
             await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
-            await bot.send_photo(message.chat.id, message.photo.file_id, caption=f'{pdisk_link}')
+            await bot.send_photo(message.chat.id, message.photo.file_id, caption=f'{**pdisk_link**}')
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
     
