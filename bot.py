@@ -121,9 +121,8 @@ async def new_pdisk_url(urls):
     return new_urls  
 
 async def remove_username(new_List):
-    for i in new_List:
-        if('https://cit.ly/1234' in i):
-        #if('@' in i or 't.me' in i or 'https://bit.ly/abcd' in i or 'https://bit.ly/123abcd' in i or 'telegra.ph' in i):
+    for i in new_List:        
+        if('@' in i or 't.me' in i or 'https://bit.ly/abcd' in i or 'https://bit.ly/123abcd' in i or 'telegra.ph' in i):
             new_List.remove(i)
     return new_List
   
