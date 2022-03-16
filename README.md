@@ -6,7 +6,7 @@ Make short link by using Droplink
 
 #### The Easy Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/Amul-jat/Droplink)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/cheesy554/testDu-link)
 
 ##### Required Variables
 
