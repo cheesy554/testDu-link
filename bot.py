@@ -28,19 +28,19 @@ bot = Client('Droplink bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm Droplink bot. Just send me link and get short link")
+        "I'm Du-link bot. Just send me link and get short link")
 
 @bot.on_message(filters.command('help') & filters.private)
 async def start(bot, message):
     await message.reply(
         f"**Hello, {message.chat.first_name}!**\n\n"
-        "**If you send post which had Links, texts & images... Than I'll convert & replace all links with your links \nMessage me (------) For more help-**")
+        "**If you send post which had Links, texts & images... Than I'll convert & replace all links with your links \nMessage me (------) For more help**")
 
 @bot.on_message(filters.command('support') & filters.private)
 async def start(bot, message):
     await message.reply(
         f"**Hey, {message.chat.first_name}!**\n\n"
-        "**please contact me on --------**")
+        "**please contact me on (--------)**")
     
 @bot.on_message(filters.text & filters.private)
 async def pdisk_uploader(bot, message):
@@ -79,7 +79,7 @@ async def pdisk_up(link):
         async with aiohttp.ClientSession() as session:
             async with session.get(url, params=params, raise_for_status=True) as response:
                 data = await response.json()
-                v_url = """🔘__Link__ - \n """ + data["shortenedUrl"] +  """\n"""
+                v_url = """🔘__Link__ - \n """ + data["**shortenedUrl**\n"] +  """\n"""
     else:
         v_url = link
         
