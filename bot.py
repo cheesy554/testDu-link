@@ -79,7 +79,7 @@ async def pdisk_up(link):
         async with aiohttp.ClientSession() as session:
             async with session.get(url, params=params, raise_for_status=True) as response:
                 data = await response.json()
-                v_url = """🔘__Episode__ - \nEn👉 """ + data["shortenedUrl"] + """\n"""
+                v_url = """🔘__Link__ - \n """ + data[**"shortenedUrl"**]\n[``"shortenedUrl"``] + """\n"""
     else:
         v_url = link
         
@@ -126,15 +126,15 @@ async def remove_username(new_List):
             new_List.remove(i)
     return new_List
   
-#async def addFooter(str):
-    #footer = """\n__🔆Also available on Telegram in private channel Directly🔆__
+async def addFooter(str):
+    footer = """\n__🔆Also available on Telegram in private channel Directly🔆__
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-#__#SavitaBhabhi #ComicVideo #Savita #Hindi #Sexy_voice #Kirtu #Savita_Bhabhi #Velamma #Crazydad #Momshelp #incest__
+--------
 
-#🔅How to Download -""" + HOWTO + """\n
-#📣 Provide By @"""+ CHANNEL + """
-#__🔊For all  Direct Comics folder lifetime Membership msg me on @Kamdev07 or Join- @vip_comics__"""
+🔅How to Download -""" + HOWTO + """\n
+📣 Provide By @"""+ CHANNEL + """
+__🔊For all  Direct Comics folder lifetime Membership msg me on ------- or Join- ---------"""
     return str + footer
         
 bot.run()
