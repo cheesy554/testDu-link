@@ -127,14 +127,7 @@ async def remove_username(new_List):
     return new_List
   
 async def addFooter(str):
-    footer = """\n__🔆Also available on Telegram in private channel Directly🔆__
-
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
---------
-
-🔅How to Download -""" + HOWTO + """\n
-📣 Provide By @"""+ CHANNEL + """
-__🔊For all  Direct Comics folder lifetime Membership msg me on ------- or Join- ---------"""
+    footer = """-------"""
     return str + footer
         
 bot.run()
