@@ -18,7 +18,7 @@ API_KEY = environ.get('API_KEY')
 CHANNEL = environ.get('CHANNEL')
 HOWTO = environ.get('HOWTO')
 
-bot = Client('Droplink bot', 
+bot = Client('Du-link bot', 
              api_id=API_ID, 
              api_hash=API_HASH,
              bot_token=BOT_TOKEN)
@@ -80,7 +80,7 @@ async def pdisk_up(link):
             async with session.get(url, params=params, raise_for_status=True) as response:
                 data = await response.json()
                 #v_url = """🔘__Link__ - \n """ + data["shortenedUrl"] +  """\n"""
-                v_url =  data["shortenedUrl"] ["shortenedUrl"] +  """\n"""
+                v_url =  data["shortenedUrl"] +  """\n"""
     else:
         v_url = link
         
@@ -104,7 +104,7 @@ async def multi_pdisk_up(ml_string):
             if (urls[j] in new_ml_string[i]):
                 url_index.append(count)
         count += 1
-    new_urls = await new_pdisk_url(urls)
+    new_urls = await new_pdisk_url(**urls**)
     url_index = list(dict.fromkeys(url_index))
     i = 0
     for j in url_index:
