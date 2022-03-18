@@ -104,7 +104,7 @@ async def multi_pdisk_up(ml_string):
             if (urls[j] in new_ml_string[i]):
                 url_index.append(count)
         count += 1
-    new_urls = await new_pdisk_url(**urls**)
+    new_urls = await **new_pdisk_url**(urls)
     url_index = list(dict.fromkeys(url_index))
     i = 0
     for j in url_index:
