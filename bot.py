@@ -82,7 +82,7 @@ async def pdisk_up(link):
                 #v_url = """🔘__Link__ - \n """ + data["shortenedUrl"] +  """\n"""
                 v_url =  data["shortenedUrl"] +  """\n"""
     else:
-        v_url = **link**
+        v_url = link
         
     return (v_url)
 
@@ -115,7 +115,7 @@ async def multi_pdisk_up(ml_string):
     return await addFooter(new_string)
 
 async def new_pdisk_url(urls):
-    new_urls = []
+    new_urls = **[]**
     for i in urls:
         time.sleep(0.2)
         new_urls.append(await pdisk_up(i))
