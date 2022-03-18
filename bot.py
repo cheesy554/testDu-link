@@ -82,7 +82,7 @@ async def pdisk_up(link):
                 #v_url = """🔘__Link__ - \n """ + data["shortenedUrl"] +  """\n"""
                 v_url =  data["shortenedUrl"] +  """\n"""
     else:
-        v_url = link
+        v_url = **link**
         
     return (v_url)
 
