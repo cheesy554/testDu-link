@@ -72,7 +72,7 @@ async def link_handler(bot, message):
         await message.reply(f'Error: {e}', quote=True)
     
 async def pdisk_up(link):
-    if ('mega' in link or 'google' in link or 'mdisk' in link or 'entertainvideo' in link or 'dood' in link or 'bit' in link  or 'tn' in link):
+    if ('mega' in link or 'google' in link or 'mdisk' in link or 'entertainvideo' in link or 'dood' in link or 'bit' in link  or 'tn' in link or 't.me' in link or 'telegram.me' in link):
         url = 'https://du-link.in/api'
         params = {'api': API_KEY, 'url': link}
     
